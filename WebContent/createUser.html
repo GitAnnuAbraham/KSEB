@@ -1,0 +1,55 @@
+<html>
+	<head>
+	<link rel="stylesheet" href = "css/signup.css"/>
+	</head>
+	<body>
+		<form name="signup" action="createUser" method="post">
+			<h1>User Addition Page</h1>
+			<div id="input-text">
+				<label><b>Name</b></label>
+				<input type="text" name="name" placeholder = "Enter name">
+			</div>
+			<div id="input-text">
+				<label><b>Designation</b></label>
+				<select name="designation">
+					<option>--Select One--</option>
+					<option value="Electrical Engineer">Electrical Engineer</option>
+					<option value="Lineman">Lineman</option>
+					<option value="Inventory Manager">Inventory Manager</option>
+					<option value = "Consumer">Consumer</option>
+				</select>
+			</div>
+			<div id = "input-text">
+				<label><b>Password</b></label>
+				<input type="password" name="password" placeholder = "Enter Password"/>
+			</div>
+			<div id = "signup">
+				<input type="submit" value="Sign Up" id = "signup-btn" onclick="return validateForm()"/>
+			</div>
+		</form>
+		<script>
+		function validateForm() {
+		    var name = document.signup.name.value;
+	        var password = document.signup.password.value;
+	        var designation = document.signup.designation.value; // Corrected variable name
+
+	        if (name !== "" && password !== "" && designation !== "--Select One--") {
+	            return true;
+	        }
+
+	        var alertMessage = "Invalid ";
+	        if (name === "") {
+	            alertMessage = alertMessage + "Name, ";
+	        }
+	        if (password === "") {
+	            alertMessage = alertMessage + "Password, ";
+	        }
+	        if (designation === "--Select One--") {
+	            alertMessage = alertMessage + "Designation";
+	        }
+	        alert(alertMessage);
+	        return false;
+		}
+		</script>		
+	</body>	
+</html>

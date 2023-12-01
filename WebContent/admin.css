@@ -1,0 +1,57 @@
+body {
+    margin: 100px;
+    border: 20px;
+    padding: 2px;
+    background-color: #04AA6D;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #333;
+    background-color: #04AA6D;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}	
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+p {
+    padding: 10px;
+    text-align: center;
+}
+
+.success {
+    color: green;
+}
+
+.failure {
+    color: red;
+}
